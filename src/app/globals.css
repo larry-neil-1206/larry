@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* https://css-tricks.com/custom-scrollbars-in-webkit/ */
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292d45;
+  height: 80%;
+  padding-top: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #3d4363;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.content:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.folder-container {
+  position: relative;
+}
+
+.content:hover .line-before-folder {
+  height: calc(100% - 28px);
+  position: absolute;
+  border-left: 1px solid #31374e;
+  top: 28px;
+  user-select: none;
+}
+
+.folder-active .line-before-folder {
+  height: calc(100% - 28px);
+  position: absolute;
+  border-left: 1.5px solid #31374e;
+  top: 28px;
+  user-select: none;
+}
+
+.top-arrows,
+.bottom-arrows {
+  content: '';
+  position: absolute;
+  z-index: 30;
+}
+
+.top-arrows.left-arrow {
+  top: -2px;
+  left: -2px;
+}
+
+.top-arrows.right-arrow {
+  top: -2px;
+  right: -2px;
+}
+
+.bottom-arrows.left-arrow {
+  bottom: -2px;
+  left: -2px;
+}
+
+.bottom-arrows.right-arrow {
+  bottom: -2px;
+  right: -2px;
+}
+
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.button-hover-shadow:hover {
+  box-shadow:
+    0 4px 7px rgba(0, 0, 0, 0.15),
+    0 100px 80px rgba(255, 255, 255, 0.02),
+    0 42px 33px rgba(255, 255, 255, 0.024),
+    0 22px 18px rgba(255, 255, 255, 0.028),
+    0 12px 10px rgba(255, 255, 255, 0.034),
+    0 7px 5px rgba(255, 255, 255, 0.04),
+    0 3px 2px rgba(255, 255, 255, 0.07);
+}
+
+.glow-card-transition-duration {
+  transition-duration: 600ms;
+}
+
+.glow-card-transition-duration:hover {
+  transition-duration: 70ms;
+}
+
+.icon-blur {
+  filter: blur(18px);
+}
+
+.scroll-down {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-down span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scroll-down 1.5s infinite;
+}
+
+.scroll-down span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.scroll-down span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-15px, -15px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(15px, 15px);
+  }
+}
+
+#about-me canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#stars-container canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.skills-picker {
+  position: relative;
+  border: 4px solid #282828;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow:
+    -5px -5px 5px rgba(255, 255, 255, 0.1),
+    10px 10px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.skills-buttons {
+  background: #212121;
+  padding: 2px;
+  box-shadow:
+    inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 5px rgba(151, 154, 212, 0.5);
+}
+
+.skills-buttons-active {
+  padding: 0;
+  border: 2px solid #292929;
+  box-shadow:
+    inset -2px -2px 5px rgba(151, 154, 212, 0.3),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.skills-picker:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: linear-gradient(-250deg, #8fd16e 0%, #75c565 50%, #31d04e 100%);
+  filter: blur(10px);
+  z-index: -1;
+  animation: hue 3s linear infinite;
+}
+
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.my-work-img-shadow {
+  box-shadow: -4px -4px 25px 4px #000000;
+}
+
+.my-work-button::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  transform: translateY(6px);
+  transition: all 0.3s ease-in-out;
+}
+
+.my-work-button-container:hover .my-work-button::before {
+  width: 100%;
+}
+
+.my-work-button-container:hover span {
+  transform: translateX(4px);
+}
+
+.my-work-button-container:hover .my-work-button-arrow {
+  transform: translateX(0);
+}
+
+.app-gradient-bg {
+  background-color: #3649aa;
+  background-image: linear-gradient(315deg, #3649aa 0%, #2bd2ff 52%, #2b60ff 90%);
+}

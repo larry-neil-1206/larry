@@ -1,0 +1,135 @@
+import { AppSolution, Border, Button, Container, FadeIn, FadeInStagger, Section } from '@/components';
+import Image from 'next/image';
+import { davidzwirner } from '../../../../public/projects';
+
+export const appData = {
+  industry: 'Art',
+  title: 'David Zwirner',
+  description: 'David Zwirner is a well-known art dealer and gallerist. He is the founder of David Zwirner Gallery, which has locations in New York, London, and Hong Kong. The gallery represents a wide range of contemporary artists and is known for its innovative exhibitions and programming. David Zwirner has been instrumental in shaping the contemporary art world and is considered one of the most influential figures in the industry.',
+  image: davidzwirner,
+  date: '2023-04',
+  service: 'Saas application',
+  url: 'https://www.davidzwirner.com/',
+  pathname: '/apps/david-zwirner',
+  framework: 'next',
+};
+
+export const sections = [
+  { index: 0, title: 'About', id: 'about' },
+  { index: 1, title: 'Experience', id: 'experience' },
+  { index: 2, title: 'Technologies', id: 'technologies' },
+];
+
+export const metadata = {
+  title: `${appData.title}`,
+  description: appData.description,
+};
+
+export const technologies = [
+  {
+    name: 'HTML5',
+    image: '/logos/html5-logo.png',
+  },
+  {
+    name: 'CSS3',
+    image: '/logos/css-logo.png',
+  },
+  {
+    name: 'JavaScript',
+    image: '/logos/js-logo.png',
+  },
+  {
+    name: 'ReactJS',
+    image: '/logos/react-logo.png',
+  },
+  {
+    name: 'TypeScript',
+    image: '/logos/ts-logo.png',
+  },
+  {
+    name: 'NextJS',
+    image: '/logos/nextjs-logo.png',
+  },
+  {
+    name: 'TailwindCSS',
+    image: '/logos/tailwindcss-logo.jpg',
+  },
+  {
+    name: 'Stripe',
+    image: '/logos/stripe-logo.png',
+  },
+  {
+    name: 'Git',
+    image: '/logos/git-logo.png',
+  },
+  {
+    name: 'Github',
+    image: '/logos/github-logo.webp',
+  },
+  {
+    name: 'Sanity',
+    image: '/logos/sanity-cms-logo.png',
+  },
+  {
+    name: 'Storybook',
+    image: '/logos/storybook-logo.png',
+  },
+  {
+    name: 'GraphQL',
+    image: '/logos/graphql-logo.png',
+  },
+];
+
+<Container>
+
+<Border className="my-8" />
+
+  <Section id="experience">
+    ## Experience
+
+    • Led the development of a mono-repo project using the Next.js framework, integrating with Sanity Studio, resulting in a modern and performant website.
+
+    • Managed the deployment of the development and staging versions of the site using Vercel, ensuring efficient and reliable deployment processes.
+
+    • Implemented robust CI/CD pipelines between GitHub and Vercel, ensuring seamless integration and continuous deployment of the project.
+
+    • Developed and executed comprehensive Playwright tests to validate code changes and prevent unverified code from merging into the main branch on GitHub.
+
+    • Collaborated on a mono-repo project consisting of three sub-projects: web (main project), design-system, and sanity-studio, ensuring efficient collaboration and code sharing across the project.
+
+    • Developed and tested main components using Storybook, ensuring optimal functionality and a seamless user experience. management and retrieval.
+
+    • Ensured consistent styling and code quality across the project by utilizing Tailwind CSS, Husky, Prettier, and ESLint.
+
+  </Section>
+
+<Border className="my-8" />
+
+<Section id="technologies">
+
+## Technologies
+
+<FadeInStagger className="flex gap-4 mt-6 flex-wrap" faster once>
+  {technologies.map((tech) => (
+    <FadeIn key={tech.name}>
+      <div className="mt-auto">
+        <Image
+          src={tech.image}
+          className="object-contain rounded-md m-auto"
+          alt=""
+          height={64}
+          width={64}
+          style={{
+            width: 64,
+            height: 64,
+          }}
+        />
+        <h3 className="text-sm font-semibold tracking-tight text-[#525df3] text-center bg-white rounded-full w-min px-2 m-2 mx-auto">{tech.name}</h3>
+      </div>
+    </FadeIn>
+  ))}
+</FadeInStagger>
+
+</Section>
+
+</Container>
