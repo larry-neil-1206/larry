@@ -35,10 +35,10 @@ const experience = [
   {
     title: 'ThoughtBack • Part-time | Frontend Engineer',
     date: 'Aug 2016 – Mar 2018 • 1 yr 7 mos',
-    technologies: 'JavaScript • TypeScript • Next.js • Supabase • Tailwindcss',
+    technologies: 'JavaScript • TypeScript • Next.js • Firebase • Tailwindcss',
     description: [
       'Developed a project using Next.js as the primary framework, providing a robust and efficient development environment',
-      'Utilized Supabase as a real-time backend service platform, enabling seamless data management and synchronization',
+      'Utilized Firebase as a real-time backend service platform, enabling seamless data management and synchronization',
       'Implemented Tailwind CSS as the style framework for the project, resulting in a modern and responsive user interface',
       'Employed ESLint and Prettier to ensure code quality and formatting, resulting in maintainable and scalable code',
       'Implemented Cypress for end-to-end testing of the project, ensuring high-quality and error-free functionality',
