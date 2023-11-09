@@ -43,7 +43,7 @@ const experience = [
       'Employed ESLint and Prettier to ensure code quality and formatting, resulting in maintainable and scalable code',
       'Implemented Cypress for end-to-end testing of the project, ensuring high-quality and error-free functionality',
     ],
-    image: { url: '/work/thoughtback.png', height: 50, width: 196, className: 'bg-white' },
+    image: { url: '/work/thoughtback.png', height: 115, width: 200, className: 'bg-white' },
   },
   {
     title: 'Kotto LLC • Full-time | Frontend engineer | Lead developer',
