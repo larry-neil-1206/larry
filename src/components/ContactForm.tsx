@@ -31,27 +31,6 @@ export default function ContactForm() {
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        person_name: e.currentTarget.person_name.value,
-        email: e.currentTarget.email.value,
-        company: e.currentTarget.company.value,
-        message: e.currentTarget.message.value,
-      }),
-    })
-      .then((res) => {
-        toast.success('Email sent!');
-        const target = e.target as HTMLFormElement;
-        target.reset();
-      })
-      .catch((err) => {
-        toast.error('Something went wrong, please try again later.');
-      })
-      .finally(() => {
-        setLoading(false);
-      });
   };
 
   return (
