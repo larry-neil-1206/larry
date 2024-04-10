@@ -51,13 +51,6 @@ const skillsLogos = {
     { name: "PHP", image: "/logos/php.png" },
     { name: "node.js", image: "/logos/nodejs-logo.png" },
     { name: "Java", image: "/logos/java-logo.png" },
-    { name: "Ruby", image: "/logos/ruby-logo.jpeg" },
-    { name: "Go", image: "/logos/go-logo.png" },
-    { name: "C++", image: "/logos/cpp-logo.png" },
-    {
-      name: "C#",
-      image: "/logos/csharp-logo.png",
-    },
   ],
   ["Front" as string]: [
     {
@@ -76,15 +69,8 @@ const skillsLogos = {
       name: "NextJS",
       image: "/logos/nextjs-logo.png",
     },
-    { name: "Vue", image: "/logos/vue-logo.png" },
-    { name: "Nuxt.js", image: "/logos/nuxt-logo.png" },
     { name: "Angular", image: "/logos/angular-logo.png" },
-    { name: "Electron", image: "/logos/electron-logo.png" },
     { name: "Laravel", image: "/logos/laravel-logo.png" },
-    {
-      name: "Native",
-      image: "/logos/rnative-logo.png",
-    },
     {
       name: "TailwindCSS",
       image: "/logos/tailwindcss-logo.jpg",
@@ -92,10 +78,6 @@ const skillsLogos = {
     {
       name: "Sass",
       image: "/logos/sass-logo.png",
-    },
-    {
-      name: "JQuery",
-      image: "/logos/jquery-logo.webp",
     },
     {
       name: "Bootstrap",
@@ -114,10 +96,6 @@ const skillsLogos = {
     {
       name: "ExpressJS",
       image: "/logos/express-logo.png",
-    },
-    {
-      name: "NestJS",
-      image: "/logos/nestjs-logo.png",
     },
     {
       name: "MongoDB",
@@ -149,24 +127,12 @@ const skillsLogos = {
       image: "/logos/vercel-logo.png",
     },
     {
-      name: "Heroku",
-      image: "/logos/heroku-logo.webp",
-    },
-    {
-      name: "DigitalOcean",
-      image: "/logos/digital-ocean-logo.svg",
-    },
-    {
       name: "Stripe",
       image: "/logos/stripe-logo.png",
     },
     {
-      name: "Paypal",
-      image: "/logos/paypal-logo.png",
-    },
-    {
-      name: "awsS3",
-      image: "/logos/s3-logo.png",
+      name: "AWS",
+      image: "/logos/aws-logo.jpeg",
     },
     {
       name: "StrapiCMS",
@@ -183,10 +149,6 @@ const skillsLogos = {
     {
       name: "Prismic",
       image: "/logos/prismic-logo.png",
-    },
-    {
-      name: "DatoCMS",
-      image: "/logos/dato-cms-logo.png",
     },
   ],
   ["Tools" as string]: [
